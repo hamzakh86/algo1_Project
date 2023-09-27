@@ -1,0 +1,26 @@
+ALGORITHM count_chars_vowels_worlds
+VAR
+    Stnc_L,NW,NV:INTEGER:=0
+    i,j,k:INTEGER
+    Stnc : STRING
+BEGIN
+    Write("donner une phrase se termine par point")
+    Read(Stnc)
+    WHILE(Stnc(i) <> ".") DO
+        Stnc_L = Stnc_L + 1
+        i = i + 1 
+    END_WHILE
+    WHILE(j<Stnc_L) DO
+        IF(Stnc(j) = " ") THEN
+        NW := NW+1
+        END_IF
+        j=j+1;
+    END_WHILE
+    WHILE(k<Stnc_L) DO
+        IF(Stnc(k) = "a" OR Stnc(k) = "e" OR Stnc(k) = "i" OR Stnc(k) = "o" OR Stnc(k) = "u" OR Stnc(k) = "y") THEN
+        NV = NV+1
+        END_IF
+        k = k+1
+    END_WHILE
+    Write(Stnc_L,NW,NV);
+END# workshop-algo-one
